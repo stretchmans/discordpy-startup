@@ -16,6 +16,17 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
-
+    
+async def on_message(message):
+    i = message.content
+    m = message.content.replace("/","")
+    text_list = m.split("d")
+    sum = 0
+    for i in range(int(text_list[0])):
+        one = random.randint(1, int(text_list[1]))
+        sum = sum + one
+    s = sum
+    
+    await client.send_massage(message.channel, s)
 
 bot.run(token)
