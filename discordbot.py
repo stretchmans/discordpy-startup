@@ -18,8 +18,8 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
     
-async def ccb(message):
+async def ccb(ctx):
     num = random.randint(1, 100)
-    await message.send(num)
+    await ctx.send('num')
 
 bot.run(token)
