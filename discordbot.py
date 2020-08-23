@@ -20,6 +20,6 @@ async def ping(ctx):
     
 async def ccb(message):
     num = random.randint(1, 100)
-    await client.send_massage(message.channel, num)
+    await ctx.send(num)
 
 bot.run(token)
