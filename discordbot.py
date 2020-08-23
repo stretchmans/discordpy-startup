@@ -15,11 +15,8 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-async def p(ctx):
-    await ctx.send('pong')
-    
 async def ccb(ctx):
-    ##num = random.randint(1, 100)
-    await ctx.send('num')
+    num = random.randint(1, 100)
+    await ctx.send(num)
 
 bot.run(token)
