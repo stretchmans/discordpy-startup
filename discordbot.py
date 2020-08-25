@@ -4,6 +4,7 @@ import traceback
 import random
 
 client = discord.Client()
+bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 @client.event
@@ -45,6 +46,7 @@ async def on_message(message):
                     await client.send_message(message.channel, m)
 
 client.run(token)
+bot.run(token)
 
 def dice(dice_size):
     num = np.random.randint(1, int(dice_size))
