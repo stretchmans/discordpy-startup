@@ -4,7 +4,6 @@ import traceback
 import random
 
 client = discord.Client()
-client_id = conf['client_id']
 
 @client.event
 async def on_ready():
@@ -44,7 +43,7 @@ async def on_message(message):
                     # メッセージが送られてきたチャンネルへメッセージを送ります
                     await client.send_message(message.channel, m)
 
-client.run(client_id)
+client.run(token)
 
 def dice(dice_size):
     num = np.random.randint(1, int(dice_size))
